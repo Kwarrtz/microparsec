@@ -10,7 +10,10 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Microparsec
+  exposed-modules:     Text.Microparsec,
+                       Text.Microparsec.Prim,
+                       Text.Microparsec.Char,
+                       Text.Microparsec.Core
   other-extensions:    TupleSections
   build-depends:       base >=4.7 && <4.8
   hs-source-dirs:      src
