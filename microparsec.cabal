@@ -10,11 +10,21 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     Text.Microparsec,
-                       Text.Microparsec.Prim,
-                       Text.Microparsec.Char,
-                       Text.Microparsec.Core
+  exposed-modules:     Text.Microparsec
+                     , Text.Microparsec.Prim
+                     , Text.Microparsec.Char
+                     , Text.Microparsec.Core
   other-extensions:    TupleSections
   build-depends:       base >=4.7 && <4.8
   hs-source-dirs:      src
   default-language:    Haskell2010
+
+test-suite spec
+  type:                exitcode-stdio-1.0
+  default-language:    Haskell2010
+  hs-source-dirs:      tests
+  main-is:             Spec.hs
+  build-depends:       base        >=4.7 && <4.8
+                     , hspec
+                     , QuickCheck
+                     , microparsec >=0.1 && <0.2
